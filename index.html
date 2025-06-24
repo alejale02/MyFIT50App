@@ -116,7 +116,7 @@
 <div class="day"><span>Mié</span><span>Cardio intensa HIIT</span><span>15 min</span><a href="https://www.youtube.com/watch?v=Js1wnaDLiHQ" target="_blank">Ver</a></div>
 <div class="day"><span>Jue</span><span>Full Body HIIT</span><span>20 min</span><a href="https://www.youtube.com/watch?v=yOkFhJBEKwo" target="_blank">Ver</a></div>
 <div class="day"><span>Vie</span><span>Rutina 20 MIN</span><span>20 min</span><a href="https://www.youtube.com/watch?v=vsDq7SQN2EM" target="_blank">Ver</a></div>
-<div class="day sabado strava"><span>Sáb</span><span>Running exterior</span><span>50 min</span><a href="intent://activity#Intent;scheme=strava;package=com.strava;end;">Strava</a></div>
+<div class="day sabado strava"><span>Sáb</span><span>Running exterior</span><span>50 min</span><a href="#" onclick="abrirStrava()">Strava</a></div>
 <div class="day domingo"><span>Dom</span><span>HIIT corriendo</span><span>20 min</span><a href="https://www.youtube.com/watch?v=GcfjCf-4XC0" target="_blank">Ver</a></div>
 <!-- Semana 2 -->
 <h2>Semana 2</h2>
@@ -146,5 +146,17 @@
 <div class="day sabado"><span>Sáb</span><span>Boxeo funcional</span><span>30 min</span><a href="https://www.youtube.com/watch?v=kcE7ytalYBo" target="_blank">Ver</a></div>
 <div class="day domingo"><span>Dom</span><span>Boxeo HIIT intenso</span><span>30 min</span><a href="https://www.youtube.com/watch?v=TrDYJytaCdA" target="_blank">Ver</a></div>
 </section>
-</body>
+<script>
+function abrirStrava() {
+  const now = new Date().getTime();
+  setTimeout(function () {
+    const elapsed = new Date().getTime() - now;
+    if (elapsed < 500) {
+      window.location.href = "https://play.google.com/store/apps/details?id=com.strava";
+    }
+  }, 300);
+  window.location.href = "strava://";
+}
+</script></body>
 </html>
+Actualizado con enlace a Strava
